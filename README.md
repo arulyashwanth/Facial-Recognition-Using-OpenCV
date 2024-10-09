@@ -94,3 +94,62 @@ By leveraging **OpenCV** for computer vision tasks and deep learning models for 
 |           |-- emotion_model.h5                    # Emotion prediction model
 |-- pom.xml    # Maven configuration file
 |-- README.md
+
+```
+
+## Usage
+
+1. **Run the Project**:
+    After setting up OpenCV and the models, execute the `Main` class:
+    ```bash
+    mvn exec:java -Dexec.mainClass="com.example.facialrecognition.Main"
+    ```
+
+2. **User Interface**:
+    - The GUI will open and start capturing video from your camera.
+    - Detected faces will be highlighted with bounding boxes.
+    - Age, gender, and facial expression predictions will be displayed near each face.
+    - The number of faces detected will be shown on the screen in real-time.
+
+3. **Stopping the Application**:
+    - You can stop the video feed and exit the program using the GUI controls.
+
+## Modules Overview
+
+### 1. **LiveFacialRecognition Module**:
+- **Purpose**: Detects faces in real-time using Haar Cascade Classifier.
+- **Key Class**: `LiveFacialRecognition`
+- **Dependencies**: OpenCV Haar Cascade.
+
+### 2. **AgeGenderRecognition Module**:
+- **Purpose**: Predicts the age and gender of detected faces using pre-trained deep learning models.
+- **Key Class**: `AgeGenderRecognition`
+- **Dependencies**: Pre-trained models for age and gender.
+
+### 3. **ExpressionRecognition Module**:
+- **Purpose**: Recognizes facial expressions (e.g., happy, sad, angry) using CNN models.
+- **Key Class**: `ExpressionRecognition`
+- **Dependencies**: Pre-trained CNN for expression classification.
+
+### 4. **Count Module**:
+- **Purpose**: Counts the number of faces detected in each frame and displays the count on the video feed.
+- **Key Class**: `Count`
+- **Dependencies**: Uses face detection results from `LiveFacialRecognition`.
+
+### 5. **Main Module**:
+- **Purpose**: Integrates all modules and provides the main GUI to run and manage the real-time video feed.
+- **Key Class**: `Main`
+- **Dependencies**: All other modules, OpenCV, and Java Swing.
+
+## Future Enhancements
+
+- **Face Recognition**: Add the ability to recognize and identify known individuals from a pre-defined database.
+- **Emotion Intensity**: Enhance the expression recognition module to detect the intensity of emotions.
+- **Performance Optimization**: Improve the real-time processing speed using GPU acceleration or optimizing the deep learning models.
+- **Multi-Language Support**: Add support for other languages in the user interface for broader accessibility.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
