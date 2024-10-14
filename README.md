@@ -50,7 +50,7 @@ By leveraging **OpenCV** for computer vision tasks and deep learning models for 
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/RealTimeFacialRecognition.git
+    git clone https://github.com/arulyashwanth/Facial-Recognition-Using-OpenCV
     cd RealTimeFacialRecognition
     ```
 
